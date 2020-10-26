@@ -26,10 +26,10 @@ def application():
 
 
 def test_response_should_be_ok(application):
-    response = application.get('/additiona/1000/200')
+    response = application.get('/addition/1000/200')
     assert response.status == "200 OK"
 
 
 def test_addition(application):
-    response = application.get('/additiona/1000/200')
-    asset b'1200' == response.body
+    response = application.get('/addition/1000/200')
+    assert b'1200' == response.body
